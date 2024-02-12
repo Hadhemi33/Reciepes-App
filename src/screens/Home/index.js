@@ -9,10 +9,28 @@ import {
 } from "react-native";
 import styles from "./styles";
 import Button from "../../components/Button";
-const Home = ({ onPress, children }) => {
+import Input from "../../components/Input";
+import Title from "../../components/Title";
+import Categories from "../../components/Categories";
+import RecipeCard from "../../components/RecipeCard";
+const Home = ({ navigation }) => {
   return (
-    <SafeAreaView style={styles.background}>
-      <Text>Home</Text>
+    <SafeAreaView style={styles.container}>
+      <Input pressable onPress={() => navigation.navigate("Search")} />
+      <Title text="Featured Recipes" />
+      <RecipeCard
+        title="Steak with tomato sauce and bulgur rice."
+        time="20 min"
+        author={{
+          name: "James Milner",
+          image: "https://variety.com/wp-content/uploads/2021/04/Avatar.jpg",
+        }}
+      />
+      <Categories
+        categories={["All", "Trending"]}
+        selectedCategory="All"
+        onCategoryPress={() => {}}
+      />
     </SafeAreaView>
   );
 };
