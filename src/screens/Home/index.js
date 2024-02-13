@@ -16,6 +16,7 @@ import Categories from "../../components/Categories";
 import RecipeCard from "../../components/RecipeCard";
 import Card from "../../components/Card";
 const Home = ({ navigation }) => {
+  const { recipes } = useContext(RecipesContext);
   return (
     <SafeAreaView style={styles.container}>
       <Input pressable onPress={() => navigation.navigate("Search")} />
@@ -40,11 +41,19 @@ const Home = ({ navigation }) => {
         )}
       ></FlatList>
       <Categories
-        categories={["Trending", "Seasonal", "Chocoholic", "Daily","Chinese","Fruit","Vegetables"]}
+        categories={[
+          "Trending",
+          "Seasonal",
+          "Chocoholic",
+          "Daily",
+          "Chinese",
+          "Fruit",
+          "Vegetables",
+        ]}
         selectedCategory="Trending"
         onCategoryPress={() => {}}
       />
-         <FlatList
+      <FlatList
         showsHorizontalScrollIndicator={false}
         horizontal
         style={{ marginHorizontal: -24 }}

@@ -1,20 +1,15 @@
 import React from "react";
-import {
-  TouchableOpacity,
-  View,
-  Text,
-  ImageBackground,
-  Image,
-} from "react-native";
+import { View, Text, ImageBackground, Image } from "react-native";
 import styles from "./styles";
 import Button from "../../components/Button";
+
 const Splash = ({ navigation }) => {
   return (
     <ImageBackground
       style={styles.background}
       source={require("../../../assets/splash.png")}
     >
-      <View style={styles.container}>
+      <View style={styles.container}> 
         <Image
           source={require("../../../assets/logo.png")}
           style={styles.logo}
