@@ -3,9 +3,9 @@ import { Image, Text, View } from "react-native";
 import styles from "./styles";
 import Rating from "../Rating";
 
-const RecipeCard = ({ title, image, author, rating, time }) => {
+const RecipeCard = ({ title, style, image, author, rating, time }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <View style={styles.row}>
         <View style={{ flex: 1 }}>
           <Text numberOfLines={1} style={styles.title}>
@@ -16,13 +16,11 @@ const RecipeCard = ({ title, image, author, rating, time }) => {
         <Image
           style={styles.image}
           source={{
-            uri: "https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Dum-Aloo-e163632.jpg?quality=90&resize=556,505",
+            uri: "https://feelgoodfoodie.net/wp-content/uploads/2018/08/Bulgur-Pilaf-9.jpg",
           }}
         />
       </View>
-      <View
-        style={styles.footer}
-      >
+      <View style={styles.footer}>
         <View style={styles.row}>
           <Image style={styles.authorImage} source={{ uri: author.image }} />
           <Text style={styles.footerText}>By {author?.name}</Text>
