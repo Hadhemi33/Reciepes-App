@@ -1,3 +1,3 @@
 # Reciepes_App
 
-![alt text](untitled.gif)
+![alt text](figma.png)
