@@ -9,7 +9,7 @@ const Splash = ({ navigation }) => {
       style={styles.background}
       source={require("../../../assets/splash.png")}
     >
-      <View style={styles.container}> 
+      <View style={styles.container}>
         <Image
           source={require("../../../assets/logo.png")}
           style={styles.logo}

@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     height: 25,
     marginRight: 8,
     borderRadius: 20,
+    backgroundColor: colors.lightGrey,
   },
   timerIcon: {
     width: 17,

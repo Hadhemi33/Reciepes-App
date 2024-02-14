@@ -3,7 +3,7 @@ import { View, Image, TextInput, Pressable } from "react-native";
 import styles from "./styles";
 import colors from "../../constants/colors";
 
-const Input = ({ placeholder, showSearchIcon, style, pressable, onPress }) => {
+const Input = ({ showSearchIcon, style, pressable, onPress, ...props }) => {
   const renderInput = () => (
     <View style={[styles.container, style]}>
       {showSearchIcon ? (
@@ -13,10 +13,10 @@ const Input = ({ placeholder, showSearchIcon, style, pressable, onPress }) => {
         />
       ) : null}
       <TextInput
+        {...props}
         editable={!pressable}
         placeholderTextColor={colors.lightGrey}
         style={styles.input}
-        placeholder={placeholder}
       />
     </View>
   );
